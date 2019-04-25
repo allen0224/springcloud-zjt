@@ -1,5 +1,5 @@
 server:
-  port: 8100
+  port: 8200
 spring:
   application:
     name: service-zjt         # 指定配置中心配置文件的{application}
@@ -10,9 +10,22 @@ spring:
       label: master                # 指定配置中心配置文件的{label}
       discovery:
         enabled: true                    # 使用注册中心里面已注册的配置中心
-        serviceId: config-server  # 指定配置中心注册到注册中心的serviceId
-
+        serviceId: config-server
+    bus:
+      enabled: true
+      trace:
+        enabled: true   # 指定配置中心注册到注册中心的serviceId
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
-      default-zone: http://127.0.0.1:8761/eureka
+      default-zone: http://127.0.0.1:8761/eureka.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
