@@ -23,6 +23,7 @@
         <module>service-feign</module>
         <module>service-hi</module>
         <module>service-miya</module>
+        <module>service-gateway</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
