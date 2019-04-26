@@ -20,6 +20,9 @@
         <module>eureka-server</module>
         <module>service-ribbon</module>
         <module>service-feign</module>
+        <module>service-feign</module>
+        <module>service-hi</module>
+        <module>service-miya</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
