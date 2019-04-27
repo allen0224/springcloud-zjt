@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: host_route
+
+
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: host_route
+        uri: http://example.org
+        predicates:
+        - Host=**.hystrix.com
