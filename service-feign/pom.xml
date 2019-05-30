@@ -49,6 +49,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.netflix.feign</groupId>
+                <artifactId>feign-okhttp</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <dependency> <groupId>com.netflix.feign</groupId> <artifactId>feign-httpclient</artifactId> <version>RELEASE</version> </dependency>
         </dependencies>
     </dependencyManagement>
 
