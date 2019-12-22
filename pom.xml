@@ -20,7 +20,6 @@
         <module>eureka-server</module>
         <module>service-ribbon</module>
         <module>service-feign</module>
-        <module>service-feign</module>
         <module>service-hi</module>
         <module>service-miya</module>
         <module>service-gateway</module>
