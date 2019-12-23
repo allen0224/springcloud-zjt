@@ -2,7 +2,7 @@ package com.zjt.mongdb;
 
 import com.zjt.mongdb.dao.StudentDao;
 import com.zjt.mongdb.pojo.Student;
-import com.zjt.servicezjt.ServiceZjtApplication;
+import com.zjt.ServiceZjtApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
