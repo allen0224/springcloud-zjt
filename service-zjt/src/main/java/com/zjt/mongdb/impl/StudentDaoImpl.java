@@ -121,7 +121,7 @@ public class StudentDaoImpl implements StudentDao {
             Integer num = (Integer) mappedResults.get(0).get(alias);
             System.out.println("num = " + num);
         }
-
+        //范围查询
         SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date beginTime=format.parse(begin);
         Date endTime=format.parse(end);
