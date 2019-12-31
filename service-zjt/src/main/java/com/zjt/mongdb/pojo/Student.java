@@ -1,9 +1,11 @@
 package com.zjt.mongdb.pojo;
 
+import com.sun.xml.internal.ws.spi.db.DatabindingException;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Document(collection = "student")
 public class Student implements Serializable {
@@ -18,6 +20,10 @@ public class Student implements Serializable {
     private String age;
 
     private String introduce;
+
+    private Long height;
+
+    private Date creatTime;
 
     public String getSex() {
         return sex;
@@ -55,8 +61,24 @@ public class Student implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
+    public void  setId(Long id) {
         this.id = id;
+    }
+
+    public Long getHeight() {
+        return height;
+    }
+
+    public void setHeight(Long height) {
+        this.height = height;
+    }
+
+    public Date getCreatTime() {
+        return creatTime;
+    }
+
+    public void setCreatTime(Date creatTime) {
+        this.creatTime = creatTime;
     }
 }
 
