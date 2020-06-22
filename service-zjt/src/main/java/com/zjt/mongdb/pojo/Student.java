@@ -1,6 +1,5 @@
 package com.zjt.mongdb.pojo;
 
-import com.sun.xml.internal.ws.spi.db.DatabindingException;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
