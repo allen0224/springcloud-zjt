@@ -127,15 +127,38 @@ public class ExcelData {
         }
     }
 
+
+    //打印excel数据
+    public void readExcelData2(){
+        //获取行数
+        int rows = sheet.getPhysicalNumberOfRows();
+        for(int i=0;i<rows;i++){
+            if(i>0){
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.append("INSERT INTO \"SPM_LIVE_ROOM_CONFIG\"(\"ID\", \"NAME\",\"COUNTRY\", \"PRODUCT_ID\",\"SIGN\", \"VIDEO_COVER_ID\",\"VIDEO_NAME\", \"SUPPLIER_ID\", \"STATUS\",   \"CREATOR\", \"CREATE_TIME\", \"MODIFY_TIME\") VALUES \n" +
+                        "                          ( ");
+                //获取列数
+                XSSFRow row = sheet.getRow(i);
+                int columns = row.getPhysicalNumberOfCells();
+                for(int j=0;j<columns;j++){
+                    String cell = row.getCell(j).toString();
+                    stringBuilder.append(" '"+cell+"', ");
+                }
+                stringBuilder.append(" '1', 'meorientAdmin', TO_DATE('2020-06-29 12:15:06', 'SYYYY-MM-DD HH24:MI:SS'), TO_DATE('2020-06-29 12:15:06', 'SYYYY-MM-DD HH24:MI:SS'));");
+                System.out.println(stringBuilder.toString());
+            }
+        }
+    }
+
     //测试方法
     public static void main(String[] args){
-        ExcelData sheet1 = new ExcelData("C:/Users/tool/Desktop/上传视频数据.xlsx", "sheet1");
+        ExcelData sheet1 = new ExcelData("C:/Users/tool/Desktop/上传视频数据 -生产0629.xlsx", "sheet1");
 //        //获取第二行第4列
 //        String cell2 = sheet1.getExcelDateByIndex(1, 3);
 //        //根据第3列值为“customer23”的这一行，来获取该行第2列的值
 //        String cell3 = sheet1.getCellByCaseName("customer23", 2,1);
 //        System.out.println(cell2);
 //        System.out.println(cell3);
-        sheet1.readExcelData();
+        sheet1.readExcelData2();
     }
 }

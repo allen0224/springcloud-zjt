@@ -24,6 +24,7 @@
         <module>service-miya</module>
         <module>service-gateway</module>
         <module>service-zuul</module>
+        <module>services-elasticsearch</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
